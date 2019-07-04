@@ -1,0 +1,14 @@
+<launch>
+     <include file="$(find realsense2_camera)/launch/rs_camera.launch" >
+        <arg name="filters" value="pointcloud" />
+     </include>
+     <node pkg="localization" type="realsense_imu_comb_node" name="realsense_imu_comb_node"  respawn="true"/>
+     <!-- <node pkg="timed_roslaunch" type="timed_roslaunch.sh" args="1 roscpp_tutorials my_listener.launch" name="timed_roslaunch" output="screen" /> -->
+     
+     <include file="$(find orb_slam2_ros)/ros/launch/orb_slam2_d435_rgbd.launch" />
+     
+     <arg name="node_start_delay" default="10.0" />  
+     <!-- <node name="listener" pkg="roscpp_tutorials" type="listener" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' " /> -->
+     <node pkg="imu_filter_madgwick" type="imu_filter_node" name="imu_filter_node" respawn="true" />
+ <!-- <node type="rviz" name="rviz" pkg="rviz" args="-d %(find slam3d)/rviz/slam3d.rviz"> -->
+</launch>

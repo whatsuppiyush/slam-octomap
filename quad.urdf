@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<robot name="quadcopter">
+
+    <link name="camera_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 3.1416"/>
+            <geometry>
+                <mesh filename="package://zed_wrapper/urdf/base_combined.STL" />
+            </geometry>
+            <material name="dark_blue">
+                <color rgba="0.28 0.52 0.93 0.8"/>
+            </material>
+        </visual>
+    </link>
+
+</robot>
