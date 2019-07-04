@@ -1,0 +1,214 @@
+# This YAML file stores the parameters required by the Linear Kalman Filter Algorithm.
+# Please change the parameters according to your use case. 
+# If the value of the element in the ith row(starting from 0 for the topmost row) and jth column(starting from 0 for the leftmost column) of the matrix mat_name is val, 
+# [mat_name][i][j] should be set to val.
+# For example if the element of the Hk matrix in the 2nd row and 0th column is 0, then you should store it like this->
+# Hk20: 0
+# Do add/remove rows and columns if necessary.
+# Read about YAML syntax if you are still unsure about this. (https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html)
+
+
+
+# Hkr is the number of rows in Hk matrix. Hkc is the number of Columns of Hk matrix
+Hkr: 3
+Hkc: 6
+
+# Hk 0th row
+Hk00: 1
+Hk01: 0
+Hk02: 0
+Hk03: 0
+Hk04: 0
+Hk05: 0
+
+# Hk 1st row
+Hk10: 0
+Hk11: 1
+Hk12: 0
+Hk13: 0
+Hk14: 0
+Hk15: 0
+
+# Hk 2nd row
+Hk20: 0
+Hk21: 0
+Hk22: 1
+Hk23: 0
+Hk24: 0
+Hk25: 0
+
+
+
+# Fkr is the number of rows in Fk matrix. Fkc is the number of Columns of Fk matrix
+Fkr: 6
+Fkc: 6
+
+# Fk 0th row
+Fk00: 1
+Fk01: 0
+Fk02: 0
+Fk03: 0.01
+Fk04: 0
+Fk05: 0
+
+# Fk 1st row
+Fk10: 0
+Fk11: 1
+Fk12: 0
+Fk13: 0
+Fk14: 0.01
+Fk15: 0
+
+# Fk 2nd row
+Fk20: 0
+Fk21: 0
+Fk22: 1
+Fk23: 0
+Fk24: 0
+Fk25: 0.01
+
+# Fk 3rd row
+Fk30: 0
+Fk31: 0
+Fk32: 0
+Fk33: 1
+Fk34: 0
+Fk35: 0
+
+# Fk 4th row
+Fk40: 0
+Fk41: 0
+Fk42: 0
+Fk43: 0
+Fk44: 1
+Fk45: 0
+
+# Fk 5th row
+Fk50: 0
+Fk51: 0
+Fk52: 0
+Fk53: 0
+Fk54: 0
+Fk55: 1
+
+
+# Qkr is the number of rows in Qk matrix. Qkc is the number of Columns of Qk matrix
+Qkr: 6
+Qkc: 6
+
+# Qk 0th row
+Qk00: 0.4
+Qk01: 0
+Qk02: 0
+Qk03: 0
+Qk04: 0
+Qk05: 0
+
+# Qk 1st row
+Qk10: 0
+Qk11: 0.4
+Qk12: 0
+Qk13: 0
+Qk14: 0
+Qk15: 0
+
+# Qk 2nd row
+Qk20: 0
+Qk21: 0
+Qk22: 0.4
+Qk23: 0
+Qk24: 0
+Qk25: 0
+
+# Qk 3rd row
+Qk30: 0
+Qk31: 0
+Qk32: 0
+Qk33: 0.4
+Qk34: 0
+Qk35: 0
+
+# Qk 4th row
+Qk40: 0
+Qk41: 0
+Qk42: 0
+Qk43: 0
+Qk44: 0.4
+Qk45: 0
+
+# Qk 5th row
+Qk50: 0
+Qk51: 0
+Qk52: 0
+Qk53: 0
+Qk54: 0
+Qk55: 0.4
+
+
+
+# Rkr is the number of rows in Rk matrix. Rkc is the number of Columns of Rk matrix
+Rkr: 3
+Rkc: 3
+
+# Rk 0th row
+Rk00: 1
+Rk01: 0
+Rk02: 0
+
+# Rk 1st row
+Rk10: 0
+Rk11: 1
+Rk12: 0
+
+# Rk 2nd row
+Rk20: 0
+Rk21: 0
+Rk22: 1
+
+
+
+# Bkr is the number of rows in Bk matrix. Bkc is the number of Columns of Bk matrix
+Bkr: 6
+Bkc: 3
+
+# Bk 0th row
+Bk00: 0.00005
+Bk01: 0
+Bk02: 0
+
+# Bk 1st row
+Bk10: 0
+Bk11: 0.00005
+Bk12: 0
+
+# Bk 2nd row
+Bk20: 0
+Bk21: 0
+Bk22: 0.00005
+
+# Bk 3rd row
+Bk30: 0.1
+Bk31: 0
+Bk32: 0
+
+# Bk 4th row
+Bk40: 0
+Bk41: 0.1
+Bk42: 0
+
+# Bk 5th row
+Bk50: 0
+Bk51: 0
+Bk52: 0.1
+
+
+# The order of the square matrix of Covariance
+Cov_order: 6 
+
+# The dimensions of the vectors Xk, Zk, Uk,
+# and the number of rows of Kalman Gain(Kgainr) and the number of columns of Kalman Gain(Kgainc)
+Xk: 6
+Zk: 3
+Uk: 3
+Kgainr: 6
+Kgainc: 3
