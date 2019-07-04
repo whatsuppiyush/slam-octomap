@@ -33,10 +33,6 @@ The realsense camera is provided with accelerometer and gyroscope, using this al
 
 * [imu_filter_madgwick](https://x-io.co.uk/open-source-imu-and-ahrs-algorithms)
 
-To see more about Kalman Filtering, see 
-
-* [Linear Kalman Filter](https://github.com/AerialRobotics-IITK/Linear-Kalman-Filter)
-
 * https://github.com/IntelRealSense/realsenense-ros
 * http://wiki.ros.org/imu_filter_madgwick
 
@@ -44,3 +40,4 @@ To see more about Kalman Filtering, see
 
 ` rosrun imu_filter_madgwick imu_filter_node _use_magnetic_field_msg:=false _publish_debug_topics:=true`
 
+* To know more about the codes and this project see the attached SURGE_report.pdf
