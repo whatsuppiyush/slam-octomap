@@ -1,5 +1,7 @@
 # slam-octomap
 
+Tested with Intel Realsense D435i stereo camera. Capable of localizing in GPS denied environment while building a 3-D map of the surrounding. 
+
 Installation Instructions - Ubuntu 16.04 with ROS Kinetic
 ---------------------------------------------------------
 
